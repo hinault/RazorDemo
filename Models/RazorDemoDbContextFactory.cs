@@ -19,7 +19,7 @@ public class RazorDemoDbContextFactory : IDesignTimeDbContextFactory<RazorDemoCo
      .Build();
 
 
-            builder.UseSqlite(configuration.GetConnectionString("SqliteConnectionString"));
+            builder.UseSqlServer("Server=tcp:razordemo.database.windows.net,1433;Initial Catalog=razordemo;Persist Security Info=False;User ID=razordemo;Password=Lilroma2000!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         return new RazorDemoContext(builder.Options);
       }
 }

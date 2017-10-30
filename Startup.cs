@@ -24,8 +24,11 @@ namespace RazorDemo
         public void ConfigureServices(IServiceCollection services)
       {
               
+         //   services.AddDbContext<RazorDemoContext>(options =>
+           //         options.UseSqlite(Configuration.GetConnectionString("SqliteConnectionString")));
+
             services.AddDbContext<RazorDemoContext>(options =>
-                    options.UseSqlite(Configuration.GetConnectionString("SqliteConnectionString")));
+                    options.UseSqlServer(Configuration.GetConnectionString("AzureConnectionString")));
 
             services.AddMvc();
        }

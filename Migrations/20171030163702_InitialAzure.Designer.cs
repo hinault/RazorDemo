@@ -4,20 +4,22 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.EntityFrameworkCore.Storage.Internal;
 using RazorDemo.Models;
 using System;
 
 namespace RazorDemo.Migrations
 {
     [DbContext(typeof(RazorDemoContext))]
-    [Migration("20171025182734_Initial")]
-    partial class Initial
+    [Migration("20171030163702_InitialAzure")]
+    partial class InitialAzure
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.0.0-rtm-26452");
+                .HasAnnotation("ProductVersion", "2.0.0-rtm-26452")
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("RazorDemo.Models.Student", b =>
                 {
@@ -25,8 +27,7 @@ namespace RazorDemo.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(50);
+                        .IsRequired();
 
                     b.Property<string>("FirstName")
                         .IsRequired()

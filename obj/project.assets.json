@@ -13121,11 +13121,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Projets\\RazorDemo\\RazorDemo.csproj",
+      "projectUniqueName": "C:\\Projets\\RazorDemo\\RazorDemo.csproj",
       "projectName": "RazorDemo",
-      "projectPath": "c:\\Projets\\RazorDemo\\RazorDemo.csproj",
+      "projectPath": "C:\\Projets\\RazorDemo\\RazorDemo.csproj",
       "packagesPath": "C:\\Users\\owner1\\.nuget\\packages\\",
-      "outputPath": "c:\\Projets\\RazorDemo\\obj\\",
+      "outputPath": "C:\\Projets\\RazorDemo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
