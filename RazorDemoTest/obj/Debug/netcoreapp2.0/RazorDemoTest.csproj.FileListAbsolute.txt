@@ -1,0 +1,16 @@
+C:\Projets\RazorDemo\RazorDemoTest\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Projets\RazorDemo\RazorDemoTest\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Projets\RazorDemo\RazorDemoTest\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Projets\RazorDemo\RazorDemoTest\bin\Debug\netcoreapp2.0\RazorDemoTest.deps.json
+C:\Projets\RazorDemo\RazorDemoTest\bin\Debug\netcoreapp2.0\RazorDemoTest.runtimeconfig.json
+C:\Projets\RazorDemo\RazorDemoTest\bin\Debug\netcoreapp2.0\RazorDemoTest.runtimeconfig.dev.json
+C:\Projets\RazorDemo\RazorDemoTest\bin\Debug\netcoreapp2.0\RazorDemoTest.dll
+C:\Projets\RazorDemo\RazorDemoTest\bin\Debug\netcoreapp2.0\RazorDemoTest.pdb
+C:\Projets\RazorDemo\RazorDemoTest\bin\Debug\netcoreapp2.0\RazorDemo.dll
+C:\Projets\RazorDemo\RazorDemoTest\bin\Debug\netcoreapp2.0\RazorDemo.pdb
+C:\Projets\RazorDemo\RazorDemoTest\obj\Debug\netcoreapp2.0\RazorDemoTest.csprojResolveAssemblyReference.cache
+C:\Projets\RazorDemo\RazorDemoTest\obj\Debug\netcoreapp2.0\RazorDemoTest.csproj.CoreCompileInputs.cache
+C:\Projets\RazorDemo\RazorDemoTest\obj\Debug\netcoreapp2.0\RazorDemoTest.AssemblyInfoInputs.cache
+C:\Projets\RazorDemo\RazorDemoTest\obj\Debug\netcoreapp2.0\RazorDemoTest.AssemblyInfo.cs
+C:\Projets\RazorDemo\RazorDemoTest\obj\Debug\netcoreapp2.0\RazorDemoTest.dll
+C:\Projets\RazorDemo\RazorDemoTest\obj\Debug\netcoreapp2.0\RazorDemoTest.pdb
