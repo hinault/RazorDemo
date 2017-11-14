@@ -13120,12 +13120,15 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "C:\\Projets\\RazorDemo\\RazorDemo.csproj",
+      "projectUniqueName": "C:\\Projets\\RazorDemo\\RazorDemo\\RazorDemo.csproj",
       "projectName": "RazorDemo",
-      "projectPath": "C:\\Projets\\RazorDemo\\RazorDemo.csproj",
+      "projectPath": "C:\\Projets\\RazorDemo\\RazorDemo\\RazorDemo.csproj",
       "packagesPath": "C:\\Users\\owner1\\.nuget\\packages\\",
-      "outputPath": "C:\\Projets\\RazorDemo\\obj\\",
+      "outputPath": "C:\\Projets\\RazorDemo\\RazorDemo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13156,16 +13159,16 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "target": "Package",
+            "version": "2.0.0"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "2.0.0",
             "autoReferenced": true
           },
           "Microsoft.AspNetCore.All": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "2.0.0"
           }
