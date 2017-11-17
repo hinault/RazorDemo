@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 using RazorDemo.Pages.Students;
 using System.Threading.Tasks;
 
@@ -9,16 +12,51 @@ namespace RazorDemoTest.Pages.Students
     public class CreateTest : BaseTest
     {
 
-        //[TestMethod]
-        //public void TestMethod3()
-        //{
-        //    var createModel = new CreateModel(Context);
+        [TestMethod]
+        public void OnGet_ReturnPageResult()
+        {  
+            //Arrange
+            var createModel = new CreateModel(Context);
 
-        //    var page = createModel.OnGet() as PageResult;
+            //Act
+            var page = createModel.OnGet() as PageResult;
 
-        //    //assert
-        //    Assert.IsNotNull(page);
+            //Assert
+            Assert.IsNotNull(page);
 
-        //}
+        }
+
+            [TestMethod]
+            public async Task OnPostAsync_ReturnPageResult()
+            {
+                //Arrange
+                var createModel = new CreateModel(Context);
+                createModel.Student = new RazorDemo.Models.Student();
+                createModel.ModelState.AddModelError("FirstName", "Required");
+
+                //Act
+                var page = await createModel.OnPostAsync() as PageResult;
+
+                //Assert
+                Assert.IsNotNull(page);
+            }
+
+
+        [TestMethod]
+        public async Task OnPostAsync_RedirectToPage()
+        {
+            //Arrange
+            var createModel = new CreateModel(Context);
+            createModel.PageContext = new PageContext();
+
+            //Act
+            var redirect = await createModel.OnPostAsync() as RedirectToPageResult;
+
+            //Assert
+            Assert.IsNotNull(redirect);
+            Assert.AreEqual(redirect.PageName, "Index");
+        }
+
+
     }
 }

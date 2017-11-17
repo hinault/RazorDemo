@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RazorDemoTest.Pages.Students
 {
-    class Details
+    class DetailsTest
     {
     }
 }
