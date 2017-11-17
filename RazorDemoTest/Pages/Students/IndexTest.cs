@@ -10,13 +10,15 @@ namespace RazorDemoTest.Pages.Students
         [TestMethod]
         public async Task TestMethod3()
         {
+            //Arrange
             var indexModel = new IndexModel(Context);
 
-           await indexModel.OnGetAsync();
+            //Act
+            await indexModel.OnGetAsync();
 
+            //Assert
             var students = indexModel.Student;
-
-
+            Assert.IsNotNull(students);
             Assert.AreEqual(3, students.Count);
 
         }
