@@ -9,16 +9,16 @@ namespace RazorDemoTest.Pages.Students
     public class CreateTest : BaseTest
     {
 
-        [TestMethod]
-        public void TestMethod3()
-        {
-            var createModel = new CreateModel(Context);
+        //[TestMethod]
+        //public void TestMethod3()
+        //{
+        //    var createModel = new CreateModel(Context);
 
-            var page = createModel.OnGet() as PageResult;
+        //    var page = createModel.OnGet() as PageResult;
 
-            //assert
-            Assert.IsNotNull(page);
+        //    //assert
+        //    Assert.IsNotNull(page);
 
-        }
+        //}
     }
 }

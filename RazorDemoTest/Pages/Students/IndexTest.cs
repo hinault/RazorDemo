@@ -8,7 +8,7 @@ namespace RazorDemoTest.Pages.Students
     public class IndexTest : BaseTest
     {
         [TestMethod]
-        public async Task TestMethod3()
+        public async Task OnGetAsync_ReturnsAllStudents()
         {
             //Arrange
             var indexModel = new IndexModel(Context);
