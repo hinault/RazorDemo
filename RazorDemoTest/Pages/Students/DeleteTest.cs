@@ -65,7 +65,7 @@ namespace RazorDemoTest.Pages.Students
             var deleteModel = new DeleteModel(Context);
 
             //Act
-            IActionResult actionResult = await deleteModel.OnPostAsync(null) t;
+            IActionResult actionResult = await deleteModel.OnPostAsync(null);
 
             //Assert
             Assert.IsInstanceOfType(actionResult, typeof(NotFoundResult));
