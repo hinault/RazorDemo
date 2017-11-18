@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RazorDemo.Pages.Students;
 using System.Threading.Tasks;
@@ -16,9 +17,10 @@ namespace RazorDemoTest.Pages.Students
             var detailsModel = new DetailsModel(Context);
 
             //Act
-            await detailsModel.OnGetAsync(3);
+            var page = await detailsModel.OnGetAsync(3) as PageResult;
 
             //Assert
+            Assert.IsNotNull(page);
             var student = detailsModel.Student;
             Assert.IsNotNull(student);
             Assert.AreEqual(3, student.Id);

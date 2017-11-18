@@ -8,19 +8,20 @@ using System.Threading.Tasks;
 namespace RazorDemoTest.Pages.Students
 {
     [TestClass]
-    public class EditTest :BaseTest
+    public class editTest :BaseTest
     {
         [TestMethod]
         public async Task OnGetAsync_ReturnStudent()
         {
             //Arrange
-            var EditModel = new EditModel(Context);
+            var editModel = new EditModel(Context);
 
             //Act
-            await EditModel.OnGetAsync(3);
+           var page = await editModel.OnGetAsync(3) as PageResult;
 
             //Assert
-            var student = EditModel.Student;
+            Assert.IsNotNull(page);
+            var student = editModel.Student;
             Assert.IsNotNull(student);
             Assert.AreEqual(3, student.Id);
             Assert.AreEqual("Derosi", student.FirstName);
@@ -33,14 +34,14 @@ namespace RazorDemoTest.Pages.Students
         public async Task OnGetAsync_ReturnNotFound_WithNullId()
         {
             //Arrange
-            var EditModel = new EditModel(Context);
+            var editModel = new EditModel(Context);
 
             //Act
-            IActionResult actionResult = await EditModel.OnGetAsync(null);
+            IActionResult actionResult = await editModel.OnGetAsync(null);
 
             //Assert
             Assert.IsInstanceOfType(actionResult, typeof(NotFoundResult));
-            Assert.IsNull(EditModel.Student);
+            Assert.IsNull(editModel.Student);
         }
 
 
@@ -48,27 +49,27 @@ namespace RazorDemoTest.Pages.Students
         public async Task OnGetAsync_ReturnNotFound_WithId()
         {
             //Arrange
-            var EditModel = new EditModel(Context);
+            var editModel = new EditModel(Context);
 
             //Act
-            IActionResult actionResult = await EditModel.OnGetAsync(6);
+            IActionResult actionResult = await editModel.OnGetAsync(6);
 
             //Assert
             Assert.IsInstanceOfType(actionResult, typeof(NotFoundResult));
-            Assert.IsNull(EditModel.Student);
+            Assert.IsNull(editModel.Student);
         }
 
         [TestMethod]
         public async Task OnPostAsync_ReturnPageResult()
         {
             //Arrange
-            var createModel = new CreateModel(Context);
-            createModel.Student = new RazorDemo.Models.Student();
-            createModel.PageContext = new PageContext();
-            createModel.ModelState.AddModelError("FirstName", "Required");
+            var editModel = new EditModel(Context);
+            editModel.Student = new RazorDemo.Models.Student();
+            editModel.PageContext = new PageContext();
+            editModel.ModelState.AddModelError("FirstName", "Required");
 
             //Act
-            var page = await createModel.OnPostAsync() as PageResult;
+            var page = await editModel.OnPostAsync() as PageResult;
 
             //Assert
             Assert.IsNotNull(page);
@@ -79,13 +80,13 @@ namespace RazorDemoTest.Pages.Students
         public async Task OnPostAsync_ReturnRedirectToPageResult()
         {
             //Arrange
-            var createModel = new CreateModel(Context);
-            createModel.Student = await Context.Student.SingleOrDefaultAsync(m => m.Id == 3);
-            createModel.Student.FirstName = "Jean";
-            createModel.PageContext = new PageContext();
+            var editModel = new EditModel(Context);
+            editModel.Student = await Context.Student.SingleOrDefaultAsync(m => m.Id == 3);
+            editModel.Student.FirstName = "Jean";
+            editModel.PageContext = new PageContext();
 
             //Act
-            var redirect = await createModel.OnPostAsync() as RedirectToPageResult;
+            var redirect = await editModel.OnPostAsync() as RedirectToPageResult;
 
             //Assert
             Assert.IsNotNull(redirect);
