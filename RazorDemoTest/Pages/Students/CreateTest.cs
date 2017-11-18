@@ -32,6 +32,7 @@ namespace RazorDemoTest.Pages.Students
                 //Arrange
                 var createModel = new CreateModel(Context);
                 createModel.Student = new RazorDemo.Models.Student();
+                createModel.PageContext = new PageContext();
                 createModel.ModelState.AddModelError("FirstName", "Required");
 
                 //Act
@@ -43,18 +44,22 @@ namespace RazorDemoTest.Pages.Students
 
 
         [TestMethod]
-        public async Task OnPostAsync_RedirectToPage()
+        public async Task OnPostAsync_ReturnRedirectToPageResult()
         {
             //Arrange
             var createModel = new CreateModel(Context);
+            createModel.Student = new RazorDemo.Models.Student() { Id = 4,
+                                                                  FirstName ="Thomas",
+                                                                  LastName="Larabi",
+                                                                 Email = "Thomas.Larabi@gmail.com"};
             createModel.PageContext = new PageContext();
-
+           
             //Act
             var redirect = await createModel.OnPostAsync() as RedirectToPageResult;
 
             //Assert
             Assert.IsNotNull(redirect);
-            Assert.AreEqual(redirect.PageName, "Index");
+            Assert.AreEqual(redirect.PageName, "./Index");
         }
 
 
