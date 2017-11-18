@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace RazorDemoTest.Pages.Students
 {
     [TestClass]
-    class DeleteTest : BaseTest
+    public class DeleteTest : BaseTest
     {
         [TestMethod]
-        public async Task OnGetAsync_ReturnStudent()
+        public async Task OnGetAsync_ReturnPage()
         {
             //Arrange
             var deleteModel = new DeleteModel(Context);

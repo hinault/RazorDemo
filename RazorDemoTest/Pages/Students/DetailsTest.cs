@@ -11,7 +11,7 @@ namespace RazorDemoTest.Pages.Students
     {
 
         [TestMethod]
-        public async Task OnGetAsync_ReturnStudent()
+        public async Task OnGetAsync_ReturnPage()
         {
             //Arrange
             var detailsModel = new DetailsModel(Context);

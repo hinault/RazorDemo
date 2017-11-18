@@ -11,7 +11,7 @@ namespace RazorDemoTest.Pages.Students
     public class editTest :BaseTest
     {
         [TestMethod]
-        public async Task OnGetAsync_ReturnStudent()
+        public async Task OnGetAsync_ReturnPage()
         {
             //Arrange
             var editModel = new EditModel(Context);
