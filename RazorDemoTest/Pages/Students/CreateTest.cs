@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
 using RazorDemo.Pages.Students;
 using System.Threading.Tasks;
 
