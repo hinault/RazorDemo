@@ -10,6 +10,7 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: dotnet build **/*.csproj  --configuration $(buildConfiguration)
+- script: dotnet build RazorDemo/RazorDemo.csproj  --configuration $(buildConfiguration)
+- script: dotnet build RazorDemoTest/RazorDemoTest.csproj  --configuration $(buildConfiguration)
 - script: dotnet test *Test/*.csproj
   displayName: 'dotnet build $(buildConfiguration) and test'
