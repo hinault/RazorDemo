@@ -19,7 +19,7 @@ namespace RazorDemoTest.Pages.Students
             //Assert
             var students = indexModel.Student;
             Assert.IsNotNull(students);
-            Assert.AreEqual(3, students.Count);
+            Assert.AreEqual(4, students.Count);
 
         }
 
